@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+    <title>Feather CMS</title>
+    <description>A modern Swift-based content management system.</description>
+    <link>https://feathercms.com</link>
+    <language>A modern Swift-based content management system.</language>
+    <lastBuildDate>2023. Apr 20. 20:59:09 GMT+02:00</lastBuildDate>
+    <pubDate>2023-04-20 18:59:09 +0000</pubDate>
+    <ttl>250</ttl>
+    <atom:link href="https://feathercms.comrss.xml" rel="self" type="application/rss+xml"/>
+
+
+</channel>
+</rss>

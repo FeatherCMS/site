@@ -1,0 +1,42 @@
+:root {
+}
+@media (display-mode: standalone) {}
+@media (prefers-color-scheme: dark) {}
+@media screen and (min-width: 600px) {}
+@media screen and (min-width: 900px) {}
+@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1500px) {}
+@media screen and (min-width: 1800px) {}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: #000;
+    background: url(../images/feather-background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+html {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica", "Segoe UI", Roboto, Ubuntu;
+    margin: 0 auto;
+    text-align: center;
+    color: #000;
+    background: #fff;
+}
+img {
+    margin-top: 10rem;
+    width: 120px;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+    html {
+        color: #fff;
+        background: #000;
+    }
+}
