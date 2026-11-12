@@ -2,6 +2,8 @@
 type: page
 title: "Documentation"
 description: "Get started with Feather CMS, run it locally, and explore its modules."
+views:
+    html: docs.home
 ---
 
 # Feather CMS documentation
@@ -10,6 +12,6 @@ Feather CMS is a Swift CMS currently in alpha. Start by running the application 
 
 ## Start here
 
-The [Getting started guide](/docs/getting-started/run-locally/) covers two ways to run Feather: build the full stack with Docker Compose, or run the Swift application processes on your machine while Docker runs the required services.
+The [Getting started guide](/docs/getting-started/run-locally/) covers two ways to run Feather: build the full stack with Docker, or run the Swift application processes on your machine while Docker runs the required services.
 
 More guides will be added here as the documentation grows.

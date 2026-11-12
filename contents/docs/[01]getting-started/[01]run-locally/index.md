@@ -1,17 +1,17 @@
 ---
 category: "getting-started"
 title: "Run Feather CMS locally"
-description: "Start Feather CMS with Docker Compose or run the Swift application processes on your machine."
+description: "Start Feather CMS with Docker or run the Swift application processes on your machine."
 order: 1
 ---
 
 # Run Feather CMS locally
 
-You can run the complete Feather stack in Docker Compose, or run the Swift application processes on your machine while Docker provides the supporting services. Both options start PostgreSQL and Floci for local development.
+You can run the complete Feather stack in Docker, or run the Swift application processes on your machine while Docker provides the supporting services. Both options start PostgreSQL and Floci for local development.
 
 ## Before you start
 
-You need Git and Docker with the Docker Compose plugin. To run the application processes directly on your machine, install Swift 6.3 or later as well.
+You need Git and Docker. To run the application processes directly on your machine, install Swift 6.3 or later as well.
 
 ## Run the full stack with Docker Compose
 

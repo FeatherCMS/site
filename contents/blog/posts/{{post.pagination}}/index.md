@@ -1,12 +1,12 @@
 ---
 type: page
 slug: page/{{post.pagination}}
-title: Posts
-description: Browse all posts.  
+title: Blog
+description: Updates, guides, and ideas from the Feather CMS team.
 views:
     html: blog.posts
 ---
 
-# Posts
+# Blog
 
-Browse all posts.
+Updates, guides, and ideas from the Feather CMS team.

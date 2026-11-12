@@ -1,6 +1,6 @@
 <div class="card{{#featured}} featured{{/featured}}">
     {{#featured}}<span class="featured">featured</span>{{/featured}}
-    
+
     <div class="author-list">
     {{#authors}}
         <a href="{{permalink}}">
@@ -12,6 +12,12 @@
         <time datetime="{{publication.iso8601}}">{{publication.date.short}} {{publication.time.short}}</time>
         {{#contents.readingTime}} &middot; <span class="reading-time">{{.}} min read</span>{{/contents.readingTime}}
     </div>
+
+    {{#image}}
+    <a class="cover" href="{{permalink}}">
+        <img src="{{.}}" alt="{{title}}">
+    </a>
+    {{/image}}
     
     <h2 class="title"><a href="{{permalink}}" target="">{{title}}</a></h2>
     <hr>

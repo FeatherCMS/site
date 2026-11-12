@@ -58,6 +58,16 @@ img.large {
     border: 3px solid var(--material-color-secondary-tint);
     padding: 0 16px;
 }
+.card .cover {
+    display: block;
+    margin: 16px -16px;
+}
+.card .cover img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+}
 .card .featured {
     position: absolute;
     top: 16px;
@@ -148,6 +158,120 @@ img.large {
 .article-with-toc aside#toc ul li.first-level:first-child {
     margin-top: 0;
 }
+#docs {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    width: 100%;
+    margin: 0;
+}
+#docs > div,
+#docs article {
+    min-width: 0;
+}
+#docs .left {
+    grid-row: 1;
+}
+#docs .center {
+    grid-row: 2;
+    min-width: 0;
+}
+#docs .right {
+    grid-row: 3;
+    margin: 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--material-color-primary-border);
+}
+#docs .left,
+#docs .right {
+    display: block;
+}
+.docs-navigation {
+    border: 1px solid var(--material-color-primary-border);
+    border-radius: 6px;
+    background: var(--material-color-secondary-tint);
+}
+.docs-navigation summary {
+    padding: .75rem 1rem;
+    color: var(--material-color-primary-text);
+    font-weight: 700;
+    cursor: pointer;
+}
+.docs-navigation[open] summary {
+    border-bottom: 1px solid var(--material-color-primary-border);
+}
+.docs-navigation aside {
+    padding: .25rem 1rem 1rem;
+}
+#docs article table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+#docs .left ul {
+    margin: 0;
+    padding-left: 0;
+}
+#docs .left ul ul {
+    margin-top: .5rem;
+    padding-left: .85rem;
+    list-style: none;
+}
+#docs .left ul li {
+    margin-bottom: .4rem;
+    font-size: .875rem;
+    line-height: 1.4;
+    list-style: none;
+}
+#docs .left ul .category {
+    margin-top: 1.25rem;
+}
+#docs .left ul .category:first-child {
+    margin-top: 0;
+}
+#docs .left aside > ul > li > a {
+    color: var(--material-color-primary-text);
+    font-weight: 700;
+}
+#docs .left ul li a,
+#docs .right a {
+    color: var(--ghost-button-color-secondary-text);
+    text-decoration: none;
+}
+#docs .left ul li a:hover,
+#docs .right ul a:hover {
+    color: var(--link-color-hover);
+}
+#docs .right aside {
+    margin-bottom: 1rem;
+}
+#docs .right h4 {
+    margin: 0;
+}
+#docs .right aside#toc ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+#docs .right aside#toc ul ul {
+    margin-left: 16px;
+    margin-bottom: 0;
+}
+#docs .right aside#toc ul,
+#docs .right aside#toc ul li {
+    margin-bottom: 0;
+}
+#docs .right aside#toc li.level-2 { margin-left: 0; }
+#docs .right aside#toc li.level-3 { margin-left: 16px; }
+#docs .right aside#toc li.level-4 { margin-left: 32px; }
+#docs .right aside#toc ul li.first-level {
+    margin-top: 8px;
+}
+#docs .right aside#toc ul li.first-level:first-child {
+    margin-top: 0;
+}
+
 .book {
     text-align: center;
     border: 3px solid #ffaa00;
@@ -165,6 +289,55 @@ img.large {
 }
 .cta:hover {
     background: #ffaa00;
+}
+
+@media screen and (min-width: 600px) {
+    #docs .center {
+        padding: .25rem 0 0;
+    }
+    #docs .right {
+        padding: 1rem 0 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #docs {
+        grid-template-columns: 5fr 3fr;
+        column-gap: 32px;
+    }
+    #docs .left {
+        grid-column: 1 / -1;
+    }
+    #docs .center {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #docs .right {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0;
+        padding: 0;
+        border-top: 0;
+    }
+    #docs .right aside {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 16px;
+        background: var(--material-color-secondary-tint);
+        padding: 16px 32px;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+    #docs .right aside h4 {
+        margin-top: 0;
+        display: none;
+    }
+    #docs .right aside li a {
+        color: var(--material-color-tertiary-text);
+    }
+    #docs .right aside li a:hover {
+        color: var(--material-color-primary-text);
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -203,6 +376,15 @@ img.large {
     color: var(--link-color-default);
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.post-cover {
+    margin: 24px 0;
+}
+.post-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 
