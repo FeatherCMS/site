@@ -1,5 +1,5 @@
 ::selection {
-    background: var(--selection-color);
+    background: var(--selection-color-tint);
 }
    
 a:hover {
@@ -8,7 +8,7 @@ a:hover {
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link,
 h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-    color: var(--text-color);
+    color: var(--material-color-secondary-text);
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     color: var(--link-color-hover);
@@ -42,7 +42,7 @@ img.large {
 .meta {
     font-size: 14px;
     text-transform: uppercase;
-    color: var(--text-color-2);
+    color: var(--material-color-tertiary-text);
 }
 
 .card {
@@ -54,7 +54,7 @@ img.large {
     margin-bottom: 16px;
 }
 .card {
-    border: 3px solid var(--background-color-1);
+    border: 3px solid var(--material-color-secondary-tint);
     padding: 0 16px;
 }
 .card .featured {
@@ -62,14 +62,14 @@ img.large {
     top: 16px;
     right: 16px;
     padding: 8px 16px;
-    background: var(--background-color-1);
-    color: var(--link-color);
+    background: var(--material-color-secondary-tint);
+    color: var(--link-color-default);
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
 }
 .card a {
-    color: var(--text-color);
+    color: var(--material-color-secondary-text);
 }
 .card a:hover {
     color: var(--link-color-hover);
@@ -104,12 +104,12 @@ img.large {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1rem;
-    color: var(--text-color-2);
-    background: var(--background-color-1);
+    color: var(--material-color-tertiary-text);
+    background: var(--material-color-secondary-tint);
 
 }
 .tag-list a:hover {
-    color: var(--white-color);
+    color: var(--accent-color-primary-text);
     background: var(--link-color-hover);
 }
 
@@ -180,7 +180,7 @@ img.large {
         position: -webkit-sticky;
         position: sticky;
         top: 16px;
-        background: var(--background-color-1);
+        background: var(--material-color-secondary-tint);
         padding: 16px 32px;
         font-weight: bold;
         line-height: 1.5rem;
@@ -190,16 +190,16 @@ img.large {
         display: none;
     }
     .article-with-toc > div > aside li a {
-        color: var(--text-color-2);
+        color: var(--material-color-tertiary-text);
     }
     .article-with-toc > div > aside li a:hover {
-        color: var(--text-color-1);
+        color: var(--material-color-primary-text);
     }
 }
 
 
 .post span.featured {
-    color: var(--link-color);
+    color: var(--link-color-default);
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -218,7 +218,7 @@ img.large {
 .pagination a {
     font-weight: bold;
     padding: 8px 16px;
-    border: 3px solid var(--background-color-1);
+    border: 3px solid var(--material-color-secondary-tint);
 }
 .pagination a.current-page {
     border: 3px solid var(--link-color-hover);
@@ -239,8 +239,8 @@ img.large {
     margin-top: 0;
     margin-left: -1rem;
 
-    background-color: var(--background-color-1);
-    border: 3px solid var(--background-color-2);
+    background-color: var(--material-color-secondary-tint);
+    border: 3px solid var(--material-color-tertiary-tint);
 
     padding: 8px;
     margin-top: 0.25rem;
@@ -266,7 +266,7 @@ section.group {
     margin-top: 64px;
 }
 section.group h4 {
-    color: var(--text-color-3);
+    color: var(--disabled-button-color-text);
     text-transform: uppercase;
-    border-bottom: 3px solid var(--background-color-1);
+    border-bottom: 3px solid var(--material-color-secondary-tint);
 }

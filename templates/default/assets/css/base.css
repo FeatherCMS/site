@@ -1,5 +1,5 @@
 a:link {
-    color: var(--link-color);
+    color: var(--link-color-default);
 }
 a:visited {
     color: var(--link-color-visited);
@@ -11,8 +11,8 @@ a:active {
     color: var(--link-color-active);
 }
 body {
-    background: var(--background-color);
-    color: var(--text-color);
+    background: var(--material-color-primary-tint);
+    color: var(--material-color-secondary-text);
 }
 h1 {
     font-size: 2.5rem;
@@ -49,9 +49,9 @@ p {
 pre {
     font-size: 0.8rem;
     line-height: 1.25rem;
-    background: var(--background-color);
+    background: var(--material-color-primary-tint);
     margin: 2rem auto;
-    border: 3px solid var(--background-color-1);
+    border: 3px solid var(--material-color-secondary-tint);
 }
 pre code {
     text-shadow: none;
@@ -62,7 +62,7 @@ pre code {
     -webkit-overflow-scrolling: touch;
 }
 pre code a {
-    border-bottom: 1px dotted var(--text-color);
+    border-bottom: 1px dotted var(--material-color-secondary-text);
 }
 pre.snippet {
     margin-bottom: 0;
@@ -92,10 +92,10 @@ li p {
     margin: 0;
 }
 p code a, li code a {
-    border-bottom: 1px dotted var(--text-color);
+    border-bottom: 1px dotted var(--material-color-secondary-text);
 }
 hr {
     border: none;
-    border-bottom: 3px solid var(--link-color);
+    border-bottom: 3px solid var(--link-color-default);
     width: 64px;
 }

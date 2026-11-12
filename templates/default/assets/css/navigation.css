@@ -1,7 +1,7 @@
 #navigation {
     margin-top: 16px;
     overflow: hidden;
-    border-bottom: 3px solid var(--background-color-1);
+    border-bottom: 3px solid var(--material-color-secondary-tint);
 }
 #navigation > a {
     display: block;
@@ -39,8 +39,8 @@
 #navigation .menu-items a {
     display: block;
     padding: 16px;
-    border-top: 0.5px solid var(--background-color-1);
-    color: var(--text-color);
+    border-top: 0.5px solid var(--material-color-secondary-tint);
+    color: var(--material-color-secondary-text);
 }
 #navigation .menu-items a:hover {
     color: var(--link-color-hover)
