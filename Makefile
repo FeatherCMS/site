@@ -1,5 +1,7 @@
 SHELL=/bin/bash
 
+.PHONY: dev dist diff watch serve png jpg
+
 # brew install optipng jpegoptim
 
 dev:
