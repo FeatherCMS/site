@@ -1,5 +1,6 @@
 ::selection {
     background: var(--selection-color-tint);
+    color: var(--selection-color-text);
 }
    
 a:hover {

@@ -84,7 +84,7 @@
     --disabled-button-color-border: #e5e7eb;
     --disabled-button-color-hover: #e5e7eb;
 
-    --selection-color-tint: #fff;
+    --selection-color-tint: #6536ab;
     --selection-color-text: #fff;
     --box-shadow-color-tint: rgba(17, 24, 39, 0.08);
 }
@@ -176,8 +176,8 @@
         --disabled-button-color-border: #242428;
         --disabled-button-color-hover: #2c2c2e;
 
-        --selection-color-tint: #202024;
-        --selection-color-text: #f5f0f7;
+        --selection-color-tint: #7a43d1;
+        --selection-color-text: #fff;
         --box-shadow-color-tint: rgba(0, 0, 0, 0.45);
     }
 }

@@ -1,12 +1,16 @@
 #site-footer {
     border-top: 3px solid var(--material-color-secondary-tint);
     margin-top: 32px;
+    text-align: center;
 }
 #site-footer .grid {
     padding: 16px;
 }
 #site-footer img#logo-image {
     width: 256px;
+}
+#site-footer .grid > picture {
+    justify-self: center;
 }
 #site-footer h4 {
     margin-top: 8px;
@@ -35,10 +39,16 @@
     margin-bottom: 16px;
 }
 #site-footer section small:last-child {
-    text-align: left;
+    text-align: center;
 }
 
 @media screen and (min-width: 600px) {
+    #site-footer {
+        text-align: left;
+    }
+    #site-footer .grid > picture {
+        justify-self: start;
+    }
     #site-footer section small:last-child {
         text-align: right;
     }

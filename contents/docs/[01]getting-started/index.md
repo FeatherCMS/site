@@ -1,12 +1,10 @@
 ---
-type: "category"
+type: category
 title: "Getting started"
-description: "Start here to learn what Feather Framework is and how it works with Swift HTTP servers."
+description: "Run Feather CMS locally with Docker Compose or with the Swift processes on your machine."
 order: 2
 ---
 
 # Getting started
 
-Feather Framework is a collection of reusable Swift components for common backend tasks, such as database access, storage, mail, HTTP clients, and OpenAPI integration.
-
-It gives you a practical foundation for server-side Swift while keeping enough flexibility to work with the HTTP server and infrastructure choices you already prefer.
+Choose how you want to run Feather CMS. Docker Compose builds and starts the full application stack. If you have Swift 6.3 or later installed, `make local` runs the application processes on your machine and keeps PostgreSQL and Floci in Docker.
