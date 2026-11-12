@@ -12,8 +12,3 @@ hero:
         label: "Get started"
         link: "/docs/"
 ---
-
-
-# Feather CMS
-
-

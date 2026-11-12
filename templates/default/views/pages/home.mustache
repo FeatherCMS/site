@@ -4,24 +4,7 @@
 
 <section class="hero">
     <div class="hero-blob-layer" aria-hidden="true">
-        <svg viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <defs>
-                <filter id="hero-goo" x="-20%" y="-20%" width="140%" height="140%">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
-                </filter>
-            </defs>
-            <g class="blob-field" filter="url(#hero-goo)" fill="var(--accent-color-primary-tint)">
-                <circle class="hero-blob blob-a" cx="930" cy="220" r="72"></circle>
-                <circle class="hero-blob blob-b" cx="1080" cy="285" r="122"></circle>
-                <circle class="hero-blob blob-a" cx="1240" cy="185" r="80"></circle>
-                <circle class="hero-blob blob-b" cx="1380" cy="330" r="96"></circle>
-                <circle class="hero-blob blob-b" cx="890" cy="670" r="95"></circle>
-                <circle class="hero-blob blob-a" cx="1050" cy="610" r="128"></circle>
-                <circle class="hero-blob blob-b" cx="1220" cy="665" r="68"></circle>
-                <circle class="hero-blob blob-a" cx="1390" cy="575" r="122"></circle>
-            </g>
-        </svg>
+        <canvas class="hero-bubbles"></canvas>
     </div>
     <div class="hero-copy">
         <h1><span>An opinionated</span><em>Swift CMS</em><span>for agentic</span><span>development.</span></h1>
@@ -33,14 +16,13 @@
 
     <div class="hero-visual" role="group" aria-label="Quick start commands for Feather">
         <div class="architecture-card quickstart-card">
-            <div class="window-bar"><span class="window-indicator"></span><span class="window-title">Try the Feather CMS alpha now</span></div>
+            <div class="window-bar"><span class="window-indicator"></span><span class="window-title">Try Feather CMS 1.0.0-alpha.1</span></div>
             <div class="quickstart-content">
-                <div class="stack-label"><span>Run these commands to get started:</span></div>
-                <button class="copy-button" type="button" aria-label="Copy quick start commands" data-copy="git clone https://github.com/FeatherCMS/feather.git&#10;cd feather&#10;docker compose up --build">Copy</button>
+                <div class="stack-label">Run these commands:</div>
+                <button class="copy-button" type="button" aria-label="Copy quick start commands" data-copy="gh repo clone feathercms/feather&#10;cd feather&#10;docker compose up --build">Copy</button>
                 <div class="quickstart-code">
-                    <pre><code><span class="command-line"><span class="terminal-prompt">$</span> git clone https://github.com/FeatherCMS/feather.git</span><span class="command-line"><span class="terminal-prompt">$</span> cd feather</span><span class="command-line"><span class="terminal-prompt">$</span> docker compose up --build</span></code></pre>
+                    <pre><code class="command-line language-bash">gh repo clone feathercms/feather</code><code class="command-line language-bash">cd feather</code><code class="command-line language-bash">docker compose up --build</code></pre>
                 </div>
-                <p class="quickstart-requirements">* Requires <strong>Docker</strong></p>
                 <p class="quickstart-browser">Point your browser at:<br><a href="http://localhost:3456/">http://localhost:3456/</a></p>
             </div>
         </div>
@@ -80,18 +62,28 @@
         <h2>One application.<br>Clear boundaries.</h2>
         <p>Feather is a modular monolith: one application to run, with feature modules that make ownership explicit. Follow a request from its generated API contract through the use case and domain rules to the database or an external service.</p>
         </div>
-        <div class="code-window" aria-label="Example Feather project structure">
-        <div class="code-window-head"><span>Project structure</span><span>Swift packages</span></div>
-        <pre><code><span class="code-accent">application/</span>
-        Server · WebApp · Worker · Migrator
-        <span class="code-accent">modules/</span>
-        cms-account-module/
-        cms-media-module/
-        cms-web-module/
-        your-product-module/
-        <span class="code-accent">feather-core/</span>
-        shared contracts and infrastructure
-        <span class="code-dim">One codebase. Modules with ownership.</span></code></pre>
+        <div class="architecture-visual" role="img" aria-label="A single Feather application with unnamed feature modules. Requests flow from a generated API contract through the use case and domain rules to a database or external service.">
+        <div class="architecture-visual-head">
+            <span class="architecture-visual-title"><span class="window-indicator"></span>Feather application</span>
+            <span class="architecture-visual-badge">ONE DEPLOYMENT</span>
+        </div>
+        <div class="architecture-visual-body">
+            <p class="architecture-label">FEATURE MODULES</p>
+            <div class="architecture-modules">
+                <div class="architecture-module"><strong>Feature module</strong><small>Owns behavior and persistence</small></div>
+                <div class="architecture-module"><strong>Feature module</strong><small>Owns behavior and persistence</small></div>
+                <div class="architecture-module"><strong>Feature module</strong><small>Owns behavior and persistence</small></div>
+                <div class="architecture-module architecture-more-modules"><strong>More modules</strong><small>Clear ownership</small></div>
+            </div>
+            <p class="architecture-flow-label">REQUEST FLOW</p>
+            <div class="architecture-flow" aria-hidden="true">
+                <span class="architecture-step">Generated API contract</span>
+                <span class="architecture-step">Use case</span>
+                <span class="architecture-step">Domain rules</span>
+                <span class="architecture-step">Database / external service</span>
+            </div>
+            <p class="architecture-visual-note">Each module owns its behavior and persistence.</p>
+        </div>
         </div>
         </section>
 
@@ -125,21 +117,6 @@
     {{& page.contents.html}}
 </div>
 
-<section class="group">
-
-    <h4>Latest posts</h4>
-
-    {{#empty(site.context.posts)}}
-    Empty.
-    {{/empty(site.context.posts)}}
-    {{^empty(site.context.posts)}}
-    <div class="grid grid-321">
-    {{#site.context.posts}}
-        {{> partials.blog.post}}
-    {{/site.context.posts}}
-    </div>
-    {{/empty(site.context.posts)}}
-</section>
 
 {{/main}}
 {{/html}}
