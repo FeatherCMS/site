@@ -1,21 +1,21 @@
 ---
 category: "getting-started"
 title: "Run Feather CMS locally"
-description: "Run Feather CMS in Docker or on your machine, with PostgreSQL and Floci in Docker."
+description: "Run Feather CMS in Docker or build and run it locally with Swift."
 order: 1
 ---
 
 # Run Feather CMS locally
 
-You can run Feather CMS in Docker, or run it on your machine while Docker runs PostgreSQL and Floci. Both options are ready for local development.
+Run the whole stack in Docker, or build Feather CMS with Swift and run it locally while Docker handles PostgreSQL and Floci.
 
 ## Before you start
 
-You need Git and Docker. To run Feather CMS on your machine, you'll also need Swift 6.3 or later.
+You'll need Git and Docker. For the local build, install Swift 6.3 or later too.
 
 ## Run Feather CMS in Docker
 
-Clone the Feather CMS repository, move into its root directory, then build and start the application and its services:
+Clone the repository, move into its root directory, then start the stack:
 
 ```sh
 git clone https://github.com/feathercms/feather.git
@@ -23,7 +23,7 @@ cd feather
 docker compose up --build
 ```
 
-The first run builds the application images. When the services are ready, open the web app at <http://localhost:3456>. The backend API is available at <http://localhost:8080>.
+The first run builds the application images. When it's ready, open the web app at <http://localhost:3456>. The API is at <http://localhost:8080>.
 
 Press `Ctrl-C` to stop the running stack. To remove its containers and network, run:
 
@@ -31,9 +31,9 @@ Press `Ctrl-C` to stop the running stack. To remove its containers and network, 
 docker compose down
 ```
 
-Named data volumes are kept, so the database and local service data remain available the next time you start Feather.
+Docker keeps the named volumes, so your database and local service data are still there next time.
 
-## Run Feather CMS on your machine
+## Run Feather CMS locally
 
 From the repository root, run:
 
@@ -41,8 +41,8 @@ From the repository root, run:
 make local
 ```
 
-This builds and starts Feather CMS on your machine, including the Migrator, Server, Worker, WebApp, and WebStatic processes. PostgreSQL and Floci continue to run in Docker. The web app is available at <http://localhost:3456>, and the backend API is at <http://localhost:8080>.
+This builds Feather CMS and runs the Migrator, Server, Worker, WebApp, and WebStatic processes directly on your host. PostgreSQL and Floci stay in Docker. Open the web app at <http://localhost:3456>. The API is at <http://localhost:8080>.
 
-Press `Ctrl-C` to stop Feather CMS. PostgreSQL and Floci keep running in Docker. To stop those services too, run `docker compose down` from the repository root. Named volumes are preserved.
+Press `Ctrl-C` to stop Feather CMS. PostgreSQL and Floci keep running in Docker. To stop them too, run `docker compose down` from the repository root. Docker preserves the named volumes.
 
-For other development commands and environment settings, see the [Make commands guide](https://github.com/feathercms/feather/blob/main/docs/05-make-commands.md) and [environment configuration](https://github.com/feathercms/feather/blob/main/docs/04-environment.md).
+For more commands, see the [Make commands guide](https://github.com/feathercms/feather/blob/main/docs/05-make-commands.md). The [environment configuration guide](https://github.com/feathercms/feather/blob/main/docs/04-environment.md) covers the available settings.

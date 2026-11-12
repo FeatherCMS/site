@@ -2,7 +2,7 @@
 type: post
 title: "Feather CMS 1.0.0-alpha.1 is now available"
 slug: feather-cms-first-alpha-is-now-available
-description: "Run Feather CMS in Docker or on your machine, explore its modules, and help shape what comes next."
+description: "Try Feather CMS 1.0.0-alpha.1: run the full stack in Docker or build the CMS locally with Swift."
 publication: "2026-11-12 09:00:00"
 tags:
     - cms
@@ -11,15 +11,15 @@ authors:
 featured: true
 ---
 
-Starting today, [Feather CMS 1.0.0-alpha.1](https://github.com/feathercms/feather/tree/1.0.0-alpha.1) is available to try. Feather is a Swift CMS built on the [Feather Framework](https://feather-framework.com/). This alpha gives you a running application and a chance to explore its modules, APIs, and web admin. 🪶
+Today we're making [Feather CMS 1.0.0-alpha.1](https://github.com/FeatherCMS/feather/releases/tag/1.0.0-alpha.1) available to try. Feather is a Swift CMS built on the [Feather Framework](https://feather-framework.com/). You can run it locally, take a look around the admin, and see how the modules and APIs fit together. 🪶
 
-The project is still evolving, so features and APIs may change between releases. If something feels rough or doesn't work as expected, we'd love to hear about it.
+This is an alpha, so features and APIs may change. If you run into a bug or something that feels unfinished, let us know.
 
-Once Feather reaches beta, the modules will move into their own repositories. For now, they live in the main repository alongside the Feather Core library. We also plan to provide a command-line interface (CLI) to speed up code generation and support agentic development workflows.
+For now, the modules live in the main repository alongside Feather Core. Once we reach beta, we'll move them into their own repositories. We also plan to add a CLI for code generation and agentic development workflows.
 
 ## Run Feather CMS
 
-You can run Feather CMS in Docker, or run it on your machine while Docker handles PostgreSQL and [Floci](https://floci.io/aws/). Floci provides local AWS-compatible services for object storage, email, and media delivery. You'll need Git and Docker; running Feather CMS on your machine also requires Swift 6.3 or later.
+You can run the whole stack in Docker, or build Feather CMS with Swift and run it locally while Docker handles PostgreSQL and [Floci](https://floci.io/aws/). Floci provides local AWS-compatible services for object storage, email, and media delivery. You'll need Git and Docker; the local workflow also requires Swift 6.3 or later.
 
 First, clone the repository and move into its root directory:
 
@@ -30,17 +30,17 @@ cd feather
 
 ### Run Feather CMS in Docker
 
-Build and start the application and its services:
+From the repository root, start the stack:
 
 ```sh
 docker compose up --build
 ```
 
-Open the web app at <http://localhost:3456>. The backend API is available at <http://localhost:8080>. 🚀
+Once it's running, open the web app at <http://localhost:3456>. The API is at <http://localhost:8080>. 🚀
 
 Press `Ctrl-C` to stop the stack, then run `docker compose down` to remove its containers and network. Named data volumes are kept.
 
-### Run Feather CMS on your machine
+### Run Feather CMS locally
 
 From the repository root, run:
 
@@ -48,21 +48,21 @@ From the repository root, run:
 make local
 ```
 
-This builds and starts Feather CMS on your machine, including the Migrator, Server, Worker, WebApp, and WebStatic processes. PostgreSQL and Floci continue to run in Docker. Open the web app at <http://localhost:3456> and the backend API at <http://localhost:8080>.
+This builds Feather CMS and runs the Migrator, Server, Worker, WebApp, and WebStatic processes directly on your host. PostgreSQL and Floci stay in Docker. Open the web app at <http://localhost:3456> and the API at <http://localhost:8080>.
 
-Press `Ctrl-C` to stop Feather CMS. PostgreSQL and Floci keep running in Docker. Run `docker compose down` from the repository root when you want to stop those services too. Named data volumes are preserved. For other development commands, see the [Make commands guide](https://github.com/feathercms/feather/blob/main/docs/05-make-commands.md).
+Press `Ctrl-C` to stop Feather CMS. PostgreSQL and Floci will keep running. To stop them too, run `docker compose down` from the repository root. Docker keeps the named data volumes. See the [Make commands guide](https://github.com/feathercms/feather/blob/main/docs/05-make-commands.md) for more development commands.
 
-Want to run Feather on a server? The repository also has a [deployment guide](https://github.com/feathercms/feather/blob/main/deployment/README.md) for installing it natively on Ubuntu 26.04.
+If you're deploying to a server, the repository has a [guide for installing Feather CMS on Ubuntu 26.04](https://github.com/feathercms/feather/blob/main/deployment/README.md).
 
 ## Sign in to the admin
 
-The initial database seed creates a root admin account:
+The seed data creates a root admin account:
 
 - Email: `mail.tib@gmail.com`
 - Password: `root`
 
-These fixed credentials are for local testing. Change the password before exposing an instance outside your machine.
+These credentials are for local testing. Change the password before making the instance available outside your machine. 😅
 
 ## Help shape the alpha
 
-This is an early release, and your feedback can help us decide what to improve next. [Open an issue](https://github.com/feathercms/feather/issues) to report a problem or suggest an idea, or [join the Feather Discord](https://discord.gg/wMSkxCUXAD) to talk with us. You can also explore the [project documentation](https://github.com/feathercms/feather/tree/main/docs) and send a pull request.
+I'm curious what you'll build with Feather CMS. If you hit a bug, [open an issue](https://github.com/feathercms/feather/issues); for questions or ideas, [join us on Discord](https://discord.gg/wMSkxCUXAD). Pull requests are welcome too, and the [project docs](https://github.com/feathercms/feather/tree/main/docs) live in the repository.

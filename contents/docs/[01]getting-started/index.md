@@ -1,10 +1,10 @@
 ---
 type: category
 title: "Getting started"
-description: "Run Feather CMS in Docker or on your machine with PostgreSQL and Floci in Docker."
+description: "Run the full stack in Docker, or build Feather CMS locally with Swift."
 order: 2
 ---
 
 # Getting started
 
-Choose how you want to run Feather CMS. Docker starts the entire stack in containers. With Swift 6.3 or later, `make local` runs Feather CMS on your machine while PostgreSQL and Floci run in Docker.
+Use Docker to run the whole stack in containers. To build Feather CMS locally instead, run `make local`; PostgreSQL and Floci stay in Docker. You'll need Swift 6.3 or later.
