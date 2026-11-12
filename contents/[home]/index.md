@@ -1,7 +1,7 @@
 ---
 slug: ""
-title: Articles about application development 
-description: An opinionated Swift CMS for agentic development.
+title: "An opinionated Swift CMS for agentic development"
+description: "Feather gives developers and AI agents a clear, modular architecture to build on."
 views:
     html: pages.home
 
