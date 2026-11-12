@@ -49,6 +49,11 @@
     --material-color-tertiary-border: #d9dce1;
     --material-color-tertiary-hover: #e6e8eb;
 
+    --material-color-quaternary-tint: #e6e8eb;
+    --material-color-quaternary-text: #374151;
+    --material-color-quaternary-border: #d9dce1;
+    --material-color-quaternary-hover: #d9dce1;
+
     --accent-color-primary-tint: #6536ab;
     --accent-color-primary-text: #fff;
     --accent-color-primary-border: #4b2780;
@@ -135,6 +140,11 @@
         --material-color-tertiary-text: #e0dde5;
         --material-color-tertiary-border: #38383e;
         --material-color-tertiary-hover: #2f2f34;
+
+        --material-color-quaternary-tint: #111113;
+        --material-color-quaternary-text: #f7fbff;
+        --material-color-quaternary-border: #2b2b2e;
+        --material-color-quaternary-hover: #19191b;
 
         --accent-color-primary-tint: #7a43d1;
         --accent-color-primary-text: #fff;
