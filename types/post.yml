@@ -37,6 +37,10 @@ queries:
         scope: detail
         limit: 4
         filter:
-            key: tags
-            operator: matching
-            value: "{{tags}}"
+            and:
+                - key: tags
+                  operator: matching
+                  value: "{{tags}}"
+                - key: id
+                  operator: notEquals
+                  value: "{{id}}"
