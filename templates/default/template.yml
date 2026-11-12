@@ -1,0 +1,17 @@
+name: "feathercms.com website"
+description: "Public website of feathercms.com"
+url: "https://github.com/feathercms/site"
+version: "1.0.0"
+generatorVersion:
+    value: "1.0.0"
+
+demo:
+    url: "https://feathercms.com/"
+
+license:
+    name: "MIT license"
+    url: "https://github.com/feathercms/site?tab=MIT-1-ov-file"
+
+tags:
+    - "feathercms"
+    - "site"

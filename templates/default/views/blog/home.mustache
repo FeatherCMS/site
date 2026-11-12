@@ -1,0 +1,23 @@
+{{<html}}
+{{$main}}
+
+{{& page.contents.html}}
+
+
+<div id="blog" class="wrapper">
+    
+    <h4>Latest posts</h4>
+    {{#empty(context.posts)}}
+    Empty.
+    {{/empty(context.posts)}}
+    {{^empty(context.posts)}}
+    <div class="grid grid-321">
+    {{#context.posts}}
+        {{> partials.blog.post}}
+    {{/context.posts}}
+    </div>
+    {{/empty(context.posts)}}
+
+</div>
+{{/main}}
+{{/html}}

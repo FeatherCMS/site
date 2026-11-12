@@ -1,0 +1,109 @@
+{{<html}}
+{{$main}}
+
+
+<section class="hero">
+    <div class="hero-blob-layer" aria-hidden="true">
+        <canvas class="hero-bubbles"></canvas>
+    </div>
+    <div class="hero-copy">
+        <h1><span>An opinionated</span><em>Swift CMS</em><span>for agentic</span><span>development</span></h1>
+        <p class="hero-lead">{{page.hero.subtitle}}</p>
+        <div class="cta-row">
+            <a class="button button-primary" href="{{page.hero.cta.link}}">{{page.hero.cta.label}}</a>
+        </div>
+    </div>
+
+    <div class="hero-visual" role="group" aria-label="Quick start commands for Feather">
+        <div class="architecture-card quickstart-card">
+            <div class="window-bar"><span class="window-indicator"></span><span class="window-title">Try Feather CMS 1.0.0-alpha.1</span></div>
+            <div class="quickstart-content">
+                <div class="stack-label">Run these commands:</div>
+                <button class="copy-button" type="button" aria-label="Copy quick start commands" data-copy="gh repo clone feathercms/feather&#10;cd feather&#10;docker compose up --build">Copy</button>
+                <div class="quickstart-code">
+                    <pre><code class="command-line language-bash">gh repo clone feathercms/feather</code><code class="command-line language-bash">cd feather</code><code class="command-line language-bash">docker compose up --build</code></pre>
+                </div>
+                <p class="quickstart-browser">Point your browser at:<br><code>http://localhost:3456/</code></p>
+            </div>
+        </div>
+        <p class="hero-note">Swift 6.3+ · Open source · MIT license</p>
+    </div>
+</section>
+
+<div class="content-shell">
+
+        <section class="section-intro" id="why-feather">
+        <p class="eyebrow">A faster start for your product</p>
+        <h2>A working CMS you can make your own</h2>
+        <p>Start with built-in capabilities, then shape the application around your product. Feather is open source, written in Swift, and designed to be extended—from its APIs and domain logic to its web surfaces.</p>
+        </section>
+
+        <div class="feature-grid">
+        <article class="feature-card">
+        <span class="feature-number">01</span>
+        <h3>Focus on your product. We’ve got the REST</h3>
+        <p>Build on Feather’s CMS modules instead of starting from scratch. Extend them to fit your needs, then focus on the business logic that makes your product unique. We’ll bring the frontend, admin interfaces, apps, APIs and even more.</p>
+        </article>
+        <article class="feature-card">
+        <span class="feature-number">02</span>
+        <h3>Enterprise-grade architecture</h3>
+        <p>Modules keep behavior and persistence together. Clear boundaries across domain rules, application use cases, and infrastructure keep the codebase manageable as your product scales into enterprise environments.</p>
+        </article>
+        <article class="feature-card">
+        <span class="feature-number">03</span>
+        <h3>Built for agentic development</h3>
+        <p>Consistent module patterns and generated API contracts give coding agents a codebase they can navigate and extend alongside your team. Swift's type safety and compile-time guarantees help catch errors before they reach runtime.</p>
+        </article>
+        </div>
+
+        <section class="architecture-section" id="architecture">
+        <div>
+        <p class="eyebrow">Built on Feather Framework</p>
+        <h2>A strong foundation</h2>
+        <p>Feather CMS is built on Feather Framework, which provides database abstractions for PostgreSQL, SQLite, and MySQL, email delivery through SMTP and Amazon SES, S3 object storage, and much more. These foundations let you focus on your product while the framework handles the underlying technology.</p>
+        <a class="framework-docs-link" href="https://feather-framework.com/" target="_blank" rel="noreferrer">Read the docs →</a>
+        </div>
+        <div class="framework-logo">
+        <a href="https://feather-framework.com/" target="_blank" rel="noreferrer" aria-label="Visit Feather Framework documentation">
+            <img src="{{baseUrl}}/images/logos/feather-framework.png" alt="Feather Framework">
+        </a>
+        </div>
+        </section>
+
+        <section class="capabilities">
+        <h2>The language you know, across the stack</h2>
+        <p>If you build for iPhone, iPad, or Mac, Swift already feels familiar. Use it for the CMS backend, web app, workers, and migrations too. Feather runs on Apple silicon and Linux; Swift brings native performance, control when you need it, and direct interoperability with C APIs.</p>
+        </section>
+
+        <section class="agentic-section">
+        <div>
+        <p class="eyebrow">Agentic development</p>
+        <h2>Give coding agents a codebase they can follow</h2>
+        <p class="section-copy">Clear boundaries across the API, web admin, backend, and modules help coding agents trace a change through the system and make it in the right place.</p>
+        <p class="section-copy">Swift's type system and compile-time checks catch many errors before runtime, giving coding agents reliable feedback as they work—a key advantage over dynamically typed languages.</p>
+        </div>
+        <div class="principle-list">
+        <div class="principle"><span class="principle-mark">✓</span><div><strong>Explicit API contracts</strong><small>OpenAPI definitions generate API types directly from a clear, shared contract.</small></div></div>
+        <div class="principle"><span class="principle-mark">✓</span><div><strong>Vertical slices in admin</strong><small>Each slice keeps admin screens, actions, and feature logic together in one place.</small></div></div>
+        <div class="principle"><span class="principle-mark">✓</span><div><strong>Onion and hexagonal backend</strong><small>Backend layers isolate domain rules and keep infrastructure concerns separate.</small></div></div>
+        <div class="principle"><span class="principle-mark">✓</span><div><strong>Patterns across modules</strong><small>A familiar structure helps agents navigate, reuse, and extend each module.</small></div></div>
+        <div class="principle"><span class="principle-mark">✓</span><div><strong>Flexible deployment models</strong><small>Run the web app, server, workers, and migrator together or as microservices.</small></div></div>
+        </div>
+        </section>
+
+        <section class="closing-cta" id="get-started">
+        <p class="eyebrow">Open source · Now in alpha</p>
+        <h2>Explore the code. Shape what comes next</h2>
+        <p>Feather is in active alpha, so features and APIs may change. Run the application locally, inspect the modules, and help us build a Swift CMS that works well for developers and coding agents.</p>
+        <p>Join us on <a href="https://discord.gg/wMSkxCUXAD" target="_blank" rel="noreferrer">Discord</a> to talk about Feather CMS. Have an idea? Ping me on <a href="https://x.com/tiborbodecs" target="_blank" rel="noreferrer">X (Twitter)</a>, open a <a href="https://github.com/feathercms/feather/issues" target="_blank" rel="noreferrer">GitHub issue</a>, or send a <a href="https://github.com/feathercms/feather/pulls" target="_blank" rel="noreferrer">pull request</a>. Most of all, build something with Feather CMS and have fun with it. We’re excited to see what you create with Feather CMS as we use it to power our own upcoming products.</p>
+        <div class="cta-row">
+        <a class="button button-primary" href="/docs/">Get started</a>
+        </div>
+        </section>
+
+    {{& page.contents.html}}
+</div>
+
+
+{{/main}}
+{{/html}}
