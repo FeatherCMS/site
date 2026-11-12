@@ -2,6 +2,7 @@
 title: 404
 description: Page not found
 type: not-found
+noindex: true
 ---
 
 ```swift

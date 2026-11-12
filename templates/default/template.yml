@@ -3,7 +3,7 @@ description: "Public website of feathercms.com"
 url: "https://github.com/feathercms/site"
 version: "1.0.0"
 generatorVersion:
-    value: "1.0.0"
+    value: "1.0.0-rc.1"
 
 demo:
     url: "https://feathercms.com/"
