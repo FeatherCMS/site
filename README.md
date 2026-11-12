@@ -1,3 +1,3 @@
 # Feather CMS
 
-Source code of the [feathercms.com](https://feathercms.com/) site.
+Source code of [feathercms.com](https://feathercms.com/) site.

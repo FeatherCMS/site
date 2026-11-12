@@ -1,0 +1,19 @@
+name: "Feather CMS"
+language: "en-US"
+description: "An Opinionated Swift CMS for Agentic Development"
+navigation:
+    - label: "Why Feather"
+      url: "#"
+    - label: "Posts"
+      url: "/page/1/"
+    - label: "Tags"
+      url: "/tags/"
+    - label: "Authors"
+      url: "/authors/"
+    - label: "Docs"
+      url: "/docs/"
+    - label: "GitHub"
+      url: "https://github.com/feather-framework/"
+      target: "_blank"
+
+    
